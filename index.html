@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #wordle-container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+        }
+
+        #wordle-container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        #wordle-container3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+        }
+
+        #wordle-container4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        #wordle-container5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+        }
+
+        #wordle-container6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .letter-box {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        #guess-input {
+            margin-top: 20px;
+        }
+
+        #submit-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Wordle!</h1>
+
+    <div id="wordle-container1">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="wordle-container2">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="wordle-container3">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="wordle-container4">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="wordle-container5">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="wordle-container6">
+        <!-- This is where the word will be displayed -->
+        <div class="letter-box" id="letter1"></div>
+        <div class="letter-box" id="letter2"></div>
+        <div class="letter-box" id="letter3"></div>
+        <div class="letter-box" id="letter4"></div>
+        <div class="letter-box" id="letter5"></div>
+    </div>
+
+    <div id="guess-input">
+        <!-- Input for the player's guess -->
+        <input type="text" id="guess" maxlength="5" placeholder="Enter your guess">
+        <button id="submit-button" onclick="checkGuess()">Submit Guess</button>
+    </div>
