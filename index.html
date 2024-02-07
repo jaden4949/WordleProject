@@ -75,24 +75,6 @@
             cursor: pointer;
         }
 
-        #keyboard-container {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(10, 50px);
-            grid-gap: 5px;
-        }
-
-        .keyboard-button {
-            padding: 10px 0;
-            font-size: 16px;
-            cursor: pointer;
-            border: 1px solid #000;
-            background-color: #f0f0f0;
-        }
-
-        .keyboard-button.double {
-            grid-column: span 2;
-        }
     </style>
 </head>
 <body>
@@ -156,34 +138,4 @@
         <!-- Input for the player's guess -->
         <input type="text" id="guess" maxlength="5" placeholder="Enter your guess">
         <button id="submit-button" onclick="checkGuess()">Submit Guess</button>
-    </div>
-    <div id="keyboard-container">
-        <button class="keyboard-button" onclick="addLetter('A')">A</button>
-        <button class="keyboard-button" onclick="addLetter('B')">B</button>
-        <button class="keyboard-button" onclick="addLetter('C')">C</button>
-        <button class="keyboard-button" onclick="addLetter('D')">D</button>
-        <button class="keyboard-button" onclick="addLetter('E')">E</button>
-        <button class="keyboard-button" onclick="addLetter('F')">F</button>
-        <button class="keyboard-button" onclick="addLetter('G')">G</button>
-        <button class="keyboard-button" onclick="addLetter('H')">H</button>
-        <button class="keyboard-button" onclick="addLetter('I')">I</button>
-        <button class="keyboard-button" onclick="addLetter('J')">J</button>
-        <button class="keyboard-button" onclick="addLetter('K')">K</button>
-        <button class="keyboard-button" onclick="addLetter('L')">L</button>
-        <button class="keyboard-button" onclick="addLetter('M')">M</button>
-        <button class="keyboard-button" onclick="addLetter('N')">N</button>
-        <button class="keyboard-button" onclick="addLetter('O')">O</button>
-        <button class="keyboard-button" onclick="addLetter('P')">P</button>
-        <button class="keyboard-button" onclick="addLetter('Q')">Q</button>
-        <button class="keyboard-button" onclick="addLetter('R')">R</button>
-        <button class="keyboard-button" onclick="addLetter('S')">S</button>
-        <button class="keyboard-button" onclick="addLetter('T')">T</button>
-        <button class="keyboard-button" onclick="addLetter('U')">U</button>
-        <button class="keyboard-button" onclick="addLetter('V')">V</button>
-        <button class="keyboard-button" onclick="addLetter('W')">W</button>
-        <button class="keyboard-button" onclick="addLetter('X')">X</button>
-        <button class="keyboard-button" onclick="addLetter('Y')">Y</button>
-        <button class="keyboard-button" onclick="addLetter('Z')">Z</button>
-        <button class="keyboard-button" onclick="removeLetter()">Backspace</button>
-        <button class="keyboard-button" onclick="submitGuess()">Enter</button>
     </div>
