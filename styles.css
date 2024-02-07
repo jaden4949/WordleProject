@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#wordle-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+}
+
+.letter-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#wordle-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#wordle-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+}
+
+#wordle-container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#wordle-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+}
+
+#wordle-container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
