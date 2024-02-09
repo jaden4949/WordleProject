@@ -2,7 +2,7 @@ const wordBank = ["berry","space", "house","lemon"];
 let targetWord;
 let currentRow = 1
 let guessCount = 0
-const maxGuesses =6;
+const maxGuesses = 6;
 
 function startGame() { //Select a random word from word bank
   targetWord = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -18,10 +18,10 @@ function startGame() { //Select a random word from word bank
    guessCount = 0;
  }
 
- function checkGuess() {
+ function checkGuess(){
   // Check if the game has already ended
   if (currentRow > maxGuesses) {
-    alert("The game has ended. You cannot make further guesses.");
+    alert("The game has ended. You cannot make more guesses.");
     return;
   }
 
@@ -31,30 +31,23 @@ function startGame() { //Select a random word from word bank
   // Maintain a copy of the target word to keep track of correctly guessed letters
   let remainingTargetWord = targetWord;
 
-  // Display the guess in the Wordle grid
+  // Display the guess in the Wordle grid and color cells accordingly
   for (let i = 0; i < guess.length; i++) {
     const guessedLetter = guess.charAt(i);
+    const correctLetter = targetWord.charAt(i);
+
     document.getElementById(`letter${currentRow}-${i + 1}`).textContent = guessedLetter;
 
-    // Check if the guessed letter is in the target word and in the correct location
-    if (guessedLetter === targetWord.charAt(i)) {
+    if (guessedLetter === correctLetter) {
+      // Guessed letter in correct position
       document.getElementById(`letter${currentRow}-${i + 1}`).style.backgroundColor = "green";
-      // Remove the correctly guessed letter from the remaining target word
-      remainingTargetWord = remainingTargetWord.replace(guessedLetter, '');
-    }
-  }
-
-  // Check each guessed letter against the remaining target word
-  for (let i = 0; i < guess.length; i++) {
-    const guessedLetter = guess.charAt(i);
-    // If the guessed letter is in the remaining target word but not in the correct location, color the cell yellow
-    if (remainingTargetWord.includes(guessedLetter)) {
+      remainingTargetWord = remainingTargetWord.replace(guessedLetter, ''); // Remove correctly guessed letter
+    } else if (remainingTargetWord.includes(guessedLetter)) {
+      // Guessed letter in wrong position
       document.getElementById(`letter${currentRow}-${i + 1}`).style.backgroundColor = "yellow";
-      // Remove the guessed letter from the remaining target word
-      remainingTargetWord = remainingTargetWord.replace(guessedLetter, '');
-    }
-    // If the guessed letter is not in the target word, color the cell gray
-    else if (!targetWord.includes(guessedLetter)) {
+      remainingTargetWord = remainingTargetWord.replace(guessedLetter, ''); // Remove guessed letter
+    } else {
+      // Guessed letter not in target word
       document.getElementById(`letter${currentRow}-${i + 1}`).style.backgroundColor = "gray";
     }
   }
